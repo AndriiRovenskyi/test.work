@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  outline: none !important;
+}
+
+button:disabled,
+button[disabled] {
+  color: rgba(0, 0, 0, .26);
+  background-color: rgba(0, 0, 0, .12);
+}
+
+.g-btn-blue {
+  background-color: #24A2D9;
+  width: 132px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+  outline: none;
+  color: white;
+}
+
+.form-field {
+  position: relative;
+
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+    color: #444C5C;
+  }
+
+  input {
+    display: block;
+    border: 1px solid #D5D9E1;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 14px 80px 14px 18px;
+    color: #444C5C;
+    margin-top: 10px;
+    height: 50px !important;
+    min-height: 50px !important;
+    outline: none !important;
+
+    ::placeholder {
+      color: #C7CCD6;
+    }
+
+    :-ms-input-placeholder {
+      color: #C7CCD6;
+    }
+
+    ::-ms-input-placeholder {
+      color: #C7CCD6;
+    }
+  }
+
+  .input-error {
+    display: none;
+  }
+}
+
+.form-field-invalid {
+  label {
+    color: #f44336;
+  }
+
+  input {
+    border-color: #f44336;
+  }
+
+  input::placeholder {
+    color: #f44336 !important;
+  }
+
+  input:-ms-input-placeholder {
+    color: #f44336 !important;
+  }
+
+  input::-ms-input-placeholder {
+    color: #f44336 !important;
+  }
+
+  .input-error {
+    position: absolute;
+    left: 3px;
+    color: #f44336;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 5px 0 0 3px;
+    display: block;
+  }
+}

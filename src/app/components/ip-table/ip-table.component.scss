@@ -1,0 +1,36 @@
+.table {
+  margin-top: 100px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #24A2D9;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .table {
+    margin-top: 50px;
+  }
+}

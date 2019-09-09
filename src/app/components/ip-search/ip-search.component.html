@@ -1,0 +1,19 @@
+<div class="input-group">
+  <div class="form-field" [ngClass]="{ 'form-field-invalid': searchField.invalid && searchField.touched }">
+    <label for="search">Type IP</label>
+    <input id="search" type="text" placeholder="IPv4:" [formControl]="searchField"
+           required>
+    <span class="input-error" *ngIf="searchField.invalid">
+    Please enter valid IPv4 address (example: 123.12.1.0)
+  </span>
+  </div>
+  <button class="g-btn-blue search" (click)="search.emit(searchField.value)" [disabled]="searchField.invalid">Search
+  </button>
+</div>
+
+<!--<div class="input-group">-->
+<!--  <input type="text" [formControl]="searchField" placeholder="IPv4:">-->
+<!--  <span class="error" *ngIf="searchField.invalid">Please enter valid IPv4 address (example: 123.12.1.0)</span>-->
+<!--  <button class="g-btn-blue search" (click)="search.emit(searchField.value)" [disabled]="searchField.invalid">Search-->
+<!--  </button>-->
+<!--</div>-->
