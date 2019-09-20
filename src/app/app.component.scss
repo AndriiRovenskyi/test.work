@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+.top-panel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 100%;

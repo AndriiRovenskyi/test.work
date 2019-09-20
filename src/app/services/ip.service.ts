@@ -17,6 +17,11 @@ export class IpService {
         catchError(this.handleError)
       );
   }
+
+  getOwnIp() {
+    return this.http.get('http://ipinfo.io/ip', {responseType: 'text'});
+  }
+
   private handleError(err){
     alert(err.error.error);
     return of(null);

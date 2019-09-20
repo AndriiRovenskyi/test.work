@@ -12,11 +12,17 @@ export class AppComponent implements OnInit {
 
   ips: IPv4 [];
   subscriber: Subscription;
+  ownData$: any
 
   constructor(private ipService: IpService, private sotrageService: StorageService){}
 
   ngOnInit(){
     this.ips = this.sotrageService.getIps();
+    this.ipService.getOwnIp().subscribe( res => {
+      this.ownData$ = this.ipService.findIp(res);
+    }, err => {
+      debugger
+    });
   }
 
   search(ip){
@@ -25,6 +31,8 @@ export class AppComponent implements OnInit {
       if(!res) {return}
       this.addIp(res);
     })
+
+
   }
 
   addIp(ip: IPv4) {
