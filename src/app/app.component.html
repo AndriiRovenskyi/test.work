@@ -1,4 +1,11 @@
 <div class="container">
-  <app-ip-search (search)="search($event)"></app-ip-search>
+  <div class="top-panel">
+    <div class="right">
+      <app-ip-search (search)="search($event)"></app-ip-search>
+    </div>
+    <div class="left">
+      <app-ip-box [ownData]="ownData$ | async"></app-ip-box>
+    </div>
+  </div>
   <app-ip-table [ips]="ips"></app-ip-table>
 </div>
